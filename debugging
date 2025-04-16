@@ -1,0 +1,10 @@
+problem:
+This code does not execute properly. Try to figure out why.
+function multiply(a, b){
+  a * b
+}
+//the function wants to keep going but the problem states that something is wrong, implying that code execution should stop. adding 'return' solves this, stopping code execution and 'returning' back to the caller
+solution:
+function multiply(a, b){
+  return a * b
+}
