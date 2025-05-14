@@ -1,0 +1,36 @@
+problem:
+
+The wide-mouth frog is particularly interested in the eating habits of other creatures.
+
+He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator who just LOVES to eat wide-mouthed frogs!
+
+When he meets the alligator, it then makes a tiny mouth.
+
+Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide.
+
+solution:
+
+// PREP
+
+// Parameters: a conditional needs to be written, seeing if mouthSize function's 'animal' parameter is taking in 'aligator' as an argument
+ 
+// Returns: if 'animal' is equal to 'alligator', return 'small'; otherwise return 'wide'
+
+// Examples: first, 'animal' parameter will get checked if 'alligator' was passed through it
+// if alligator is passed through, 'wide' returns
+// else return 'small'
+
+// pseudo-code
+// attach a lowerCase method to animal
+// write an if statement, checking what animal parameter is
+// if animal is equal to in value and type to 'alligator,' return 'wide'
+// else return 'small'
+
+function mouthSize(animal) {
+  animal = animal.toLowerCase()
+  if(animal == 'alligator') {
+    return 'small'
+  } else {
+    return 'wide'
+  }
+}
