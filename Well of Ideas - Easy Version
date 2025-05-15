@@ -1,0 +1,45 @@
+problem:
+
+For every good kata idea there seem to be quite a few bad ones!
+
+In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'.  
+If there are no good ideas, as is often the case, return 'Fail!'.
+
+solution:
+
+/* PREP
+
+parameters:
+- this function will take an array of any length of strings 'good' and 'bad'
+
+returns:
+- based on the number of 'good' or 'bad' strings, function should have 3 possible
+returns: 'publish!', 'i smell a series!', or 'fail!'
+
+examples:
+- conditional logic will be used to check the string
+- 1-2 'good' strings returns 'publish!'
+- 3+ 'good' strings returns 'i smell a series!'
+- any other number of 'good' strings returns 'fail!'
+
+psuedocode:
+1) add a lower case method to parameter to avoid capitalization errors
+2) if statement, checking if parameter contains 1-2 instances of 'good'
+3) if this condition is met, return 'publish!'
+4) else if statement, checking if parameter contains 3+ instances of 'good'
+5) if this condition is met, return 'i smell a series!'
+6) else, if none of conditions met thus far, return 'bad!'
+
+*/
+
+function well(x) {
+    switch (x.filter(i => i === 'good').length) {
+        case 0:
+            return 'Fail!'
+        case 1:
+        case 2:
+            return 'Publish!'
+        default:
+            return 'I smell a series!'
+    }
+}
