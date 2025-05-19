@@ -1,0 +1,38 @@
+problem:
+
+/* An anagram is the result of rearranging the letters of a word to produce a new word(see wikipedia).
+
+    Note: anagrams are case insensitive
+
+Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+*/
+
+solution:
+
+
+let anagramCheck = function(test, original) {
+    /* 
+    PREP
+     
+    parameters:
+    function takes 'test' and sees if all letters within are also 'original'
+
+    returns:
+    if above is true, function will return TRUE
+
+    examples:
+    if test = 'stop' and original = 'post'
+    output == true
+    if test 'stop' and original = 'go'
+    output == false
+    
+    pseudocode:
+    1) test will get a methods to see if all 'original' letters are within it
+    2) returns TRUE if true
+    */
+    let isAnagram = function (test, original) {
+        let test = test.toLowerCase().split('').sort().join('');
+        let original = original.toLowerCase().split('').sort().join('');
+        return (test == original) ? true : false;
+    }
+}
