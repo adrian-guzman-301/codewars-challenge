@@ -1,0 +1,26 @@
+problem:
+
+Write a method that takes one argument as name and then greets that name, capitalized and ends with an exclamation point.
+
+Example:
+
+"riley" --> "Hello Riley!"
+"JACK"  --> "Hello Jack!"
+
+solution:
+
+var greet = function(name) {
+/* PREP
+parameters:
+'name' will be an any-cased first name
+returns: function will return "hello" and 'name' with uppercased first letter, ending with '!'
+examples: ADRIAN or aDrIaN will return -> 'Hello Adrian!'
+pseudo-code: 
+  1) name needs to be all lowercased first
+  2) then name needs to have first letter uppercased
+  3) then name should get returned in a template literal, in between 'Hello' and '!'
+*/
+  let lowercased = name.toLowerCase()
+  let upperFirst = lowercased[0].toUpperCase()
+  return `Hello ${upperFirst}${lowercased.slice(1)}!`
+};
