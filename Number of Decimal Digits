@@ -1,0 +1,28 @@
+problem:
+
+Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
+
+All inputs will be valid.
+
+solution:
+
+function digits(n) {
+/* PREP
+
+parameters:
+n will always be a number greater than zero
+
+returns:
+the number of digits contained in 'n' should be returned
+
+examples:
+if n = 9, 1 should be returned
+if n = 999, 3 should be returned
+
+psuedo-code:
+1. convert n to string via toString method
+2. split n string into individual elements
+3. get the number of elements via length method
+*/
+  return n.toString().split('').length
+}
