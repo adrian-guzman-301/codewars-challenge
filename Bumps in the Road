@@ -1,0 +1,31 @@
+problem:
+
+Your car is old, it breaks easily. The shock absorbers are gone and you think it can handle about 15 more bumps before it dies totally.
+
+Unfortunately for you, your drive is very bumpy! Given a string showing either flat road (_) or bumps (n). If you are able to reach home safely by encountering 15 bumps or less, return Woohoo!, otherwise return Car Dead
+
+solution:
+
+function bump(x) {
+    /*parameters: a string consisting of either '_' (flat road segments) or 'n' (bumps in the road) characters
+    returns: if string contains 15 bumps or less, return 'woohoo!'
+             else return 'car dead'
+    examples: 'n________nnnnnn' --> 'woohoo!!'
+              'nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn' --> 'car dead'
+    pseudo-code:
+      1. assign variables to '_' and 'n'
+      2. create conditional
+      3. if flat road segments >= 15, return 'woohoo'
+      4. else return 'car dead'
+    */
+    let flatCounter = 0
+    let bumpCounter = 0
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] === '_') {
+            flatCounter++
+        } else {
+            bumpCounter++
+        }
+    }
+    return bumpCounter < 16 ? 'Woohoo!' : 'Car Dead'
+}
