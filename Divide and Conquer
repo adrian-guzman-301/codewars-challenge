@@ -1,0 +1,28 @@
+problem:
+
+Given a mixed array of number and string representations of integers, add up the non-string integers and subtract the total of the string integers.
+
+Return as a number.
+
+solution:
+
+function divCon(x){
+/*PREP
+parameters: mixed array of number and string representations of integers
+returns: sum of non-string integers and difference of string integers
+examples: [1, '1', 2, '2'] --> [3, '3']
+pseudo-code:
+  1. set a num variable for all numbers
+  2. set a string variable for all strings
+  3. run a map method through string variable
+  4. run a reduce method on number variable
+  5. run a reduce method in converted string variable
+  6. return sum of non-string integers and difference of string integers as an array with 2 values
+*/
+  let numbers = x.filter(item => typeof item === 'number')
+  let strings = x.filter(item => typeof item === 'string')
+  let sum = numbers.reduce((a, b) => a + b, 0)
+  let stringsToNumbers = strings.map(Number)
+  let difference = stringsToNumbers.reduce((a, b) => a - b, 0)
+  return sum + difference
+}
