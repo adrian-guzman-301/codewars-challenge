@@ -1,0 +1,18 @@
+problem:
+
+Write a small function that returns the values of an array that are not odd.
+
+All values in the array will be integers. Return the good values in the order they are given.
+
+solution:
+
+function noOdds( values ){
+  /*PREP
+  parameters: array of values
+  returns: array of values that are not odd
+  examples: [1,2,4,4] --> [1]
+  pseudo-code:
+    1. filter method using not modulus 2 for each item in array
+  */
+  return values.filter(item => item % 2 == 0)
+}
