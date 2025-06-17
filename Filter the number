@@ -1,0 +1,46 @@
+problem:
+
+Task
+Your task is to return a number from a string.
+
+Details
+You will be given a string of numbers and letters mixed up, you have to return all the numbers in that string in the order they occur.
+
+solution:
+
+function filterString(value) {
+  /*PREP
+  parameters: string of mixed numbers and letters
+  returns: all numbers in string in order of occurence
+  examples: 'j3mn8gpa2' --> '382'
+  pseudo-code:
+    1. filter out all letters
+    2. return remaining string characters in order
+  */
+  let splitValue = value.toLowerCase().split('')
+  let numbersOnly = []
+  for(let i = 0; i < value.length; i++) {
+    if(value[i] == '0') {
+      numbersOnly.push(0)
+    } else if(value[i] == '1') {
+      numbersOnly.push(1)
+    } else if (value[i] == '2') {
+      numbersOnly.push(2)
+    } else if (value[i] == '3') {
+      numbersOnly.push(3)
+    } else if (value[i] == '4') {
+      numbersOnly.push(4)
+    } else if (value[i] == '5') {
+      numbersOnly.push(5)
+    } else if (value[i] == '6') {
+      numbersOnly.push(6)
+    } else if (value[i] == '7') {
+      numbersOnly.push(7)
+    } else if (value[i] == '8') {
+      numbersOnly.push(8)
+    } else if (value[i] == '9') {
+      numbersOnly.push(9)
+    }
+  }
+  return Number(numbersOnly.join(''))
+}
